@@ -19,7 +19,7 @@ public:
             q.push(s);
         }
         for(int i = 1;i<digits.length();i++)
-    {
+        {
         int qlen = q.size();
         while(qlen--)
         {
@@ -33,7 +33,7 @@ public:
                 q.push(t);
             }
         }
-    }   
+        }   
         while(!q.empty())
         {
             string s;
