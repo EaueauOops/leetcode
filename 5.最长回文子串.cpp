@@ -9,7 +9,8 @@ class Solution {
 public:
     string longestPalindrome(string s) {
         int n = s.size();
-        vector<vector<int>> dp(n,vector<int> n);
+        if(n==1) return s;
+        vector<vector<int>> dp(n,vector<int> (n));
         int i,j,begin,curLen;
         int maxLen = 0;
 
@@ -29,7 +30,7 @@ public:
                     else 
                         dp[i][j] = dp[i+1][j-1];
                 }
-
+                curLen = j-i+1;
                 if(curLen>maxLen && dp[i][j])
                 {
                     maxLen = curLen;
